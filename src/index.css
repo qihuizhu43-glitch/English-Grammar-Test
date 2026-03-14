@@ -1,0 +1,39 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Microsoft YaHei", "微软雅黑", system-ui, sans-serif;
+  --color-rock-purple: #2d004d;
+  --color-rock-pink: #ff007f;
+  --color-rock-neon: #bc13fe;
+  --color-rock-dark: #1a002a;
+}
+
+body {
+  background-color: var(--color-rock-dark);
+  color: white;
+  font-family: var(--font-sans);
+}
+
+.rock-gradient {
+  background: linear-gradient(135deg, #2d004d 0%, #1a002a 100%);
+}
+
+.neon-border {
+  box-shadow: 0 0 10px var(--color-rock-pink), 0 0 20px var(--color-rock-neon);
+}
+
+.rock-button {
+  transition: all 0.2s ease;
+  clip-path: polygon(5% 0%, 100% 0%, 95% 100%, 0% 100%);
+}
+
+.rock-button:hover {
+  transform: skewX(-5deg) scale(1.05);
+  filter: brightness(1.2);
+}
+
+.explanation-card {
+  background: rgba(45, 0, 77, 0.95);
+  backdrop-filter: blur(10px);
+  border: 2px solid var(--color-rock-pink);
+}
